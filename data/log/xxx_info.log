@@ -1,0 +1,62 @@
+[2019-12-24 21:08:16,895][MainThread:400][task_id:root][api.py:142][INFO][not enough values to unpack (expected 2, got 1)]
+[2019-12-24 21:11:38,619][MainThread:2460][task_id:root][api.py:141][INFO][not enough values to unpack (expected 2, got 1)]
+[2019-12-24 21:13:30,920][MainThread:3596][task_id:root][api.py:141][INFO][not enough values to unpack (expected 2, got 1)]
+[2019-12-24 21:16:31,734][MainThread:16440][task_id:root][api.py:141][INFO][not enough values to unpack (expected 2, got 1)]
+[2019-12-24 21:17:08,376][MainThread:9332][task_id:root][api.py:141][INFO][not enough values to unpack (expected 2, got 1)]
+[2019-12-24 21:18:34,410][MainThread:13840][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /register/]
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ASUS\Desktop\zc-oj\zc_oj\utils\api\api.py", line 133, in dispatch
+    return super(APIView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ASUS\Desktop\zc-oj\zc_oj\utils\api\api.py", line 164, in handle
+    return self.Invalid_serializer(s)
+  File "C:\Users\ASUS\Desktop\zc-oj\zc_oj\utils\api\api.py", line 94, in Invalid_serializer
+    key, error = self.extract_errors(serializer.errors)
+ValueError: not enough values to unpack (expected 2, got 1)
+[2019-12-24 21:28:22,728][MainThread:17584][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /login/]
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ASUS\Desktop\zc-oj\zc_oj\utils\api\api.py", line 133, in dispatch
+    return super(APIView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ASUS\Desktop\zc-oj\zc_oj\utils\api\api.py", line 162, in handle
+    return view_method(*args, **kwargs)
+  File "C:\Users\ASUS\Desktop\zc-oj\zc_oj\account\views\oj.py", line 49, in post
+    print(User.objects.filter(username=request.data.ger('username')))
+AttributeError: 'ReturnDict' object has no attribute 'ger'
+[2019-12-28 05:06:00,152][Thread-1:17908][task_id:django.request][base.py:152][WARNING][Not Found: /]
+[2019-12-28 05:06:00,294][Thread-3:17592][task_id:django.request][base.py:152][WARNING][Not Found: /favicon.ico]
+[2019-12-28 21:26:46,069][Thread-1:7920][task_id:django.request][exception.py:135][ERROR][Internal Server Error: /captcha]
+Traceback (most recent call last):
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\views\generic\base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\ASUS\Desktop\zc-oj\zc_oj\utils\api\api.py", line 133, in dispatch
+    return super(APIView, self).dispatch(request, *args, **kwargs)
+  File "C:\Users\ASUS\Envs\zcoj-env\lib\site-packages\django\views\generic\base.py", line 88, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\ASUS\Desktop\zc-oj\zc_oj\utils\captcha\views.py", line 8, in get
+    print(request.COOKIE)
+AttributeError: 'WSGIRequest' object has no attribute 'COOKIE'
